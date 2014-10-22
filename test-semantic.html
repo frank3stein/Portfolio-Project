@@ -20,36 +20,52 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
 	<body class="container">
 		  <header class="row border1">
-			<!--<header class="row">-->
+<!--<header class="row">-->
 				<section class="col-md-6">
-					<img src="http://placepuppy.it/100/100" class="img-responsive">
+					<img src="http://placehold.it/100x100" class="img-responsive">
 				</section>
 				<section class="col-md-6 text-right">
 					<h1 class="text-uppercase">Emil Martinov</h1>
 					<h3 class="">Front-end Ninja</h3>
 				</section>
-				<!--</header>-->
+<!--</header>-->
       </header>
 
-				<section class="row">
-				<img src="http://placepuppy.it/1200/465" class="img-responsive">
-				</section>
+<!-- The border starts-->
+      <section class="row">
+          <section class="col-md-12">
+            <hr>
+          </section>
+      </section>
+<!-- The border ends -->
 
+
+<!-- the big picture  -->
+				<section class="row">
+          <section class="col-md-12">
+        <img src="http://placehold.it/1200x465" class="img-responsive">
+				  </section>
+        </section>
+<!-- big picture ends -->
+<!-- Feature work starts -->
 			<section class="row">
           <section class="col-md-12">
-				    <h2 class="heading3">Featured Work</h2>
+				    <h2>Featured Work</h2>
 				  </section>
       </section>
-      <section class="row">
-				<section class="col-md-12">
+
+<!-- Featured work ends -->
+
+<!-- Portfolio projects start x3 -->
+      <section class="row mobile">
 					<article class="col-md-4">
 
             <a class="modal-link" data-toggle="modal" data-target="#leftModal"><img src="images/chef.jpg" class="img-responsive" alt="Here our chef is mixing the ingredients."></a>
 
-            <h3><a href="">How to mix?</a></h4>
+            <h3 class="col-sm"><a href="">How to mix?</a></h4>
       
       		</article>
           
@@ -65,10 +81,9 @@
 				
 					</article>
         </section>  
-  </article>
 
-
-    <!-- Button trigger modal -->
+<!-- Portfolio Projects end -->
+    <!-- Button trigger modal !removed-->
 
 
 <!-- Modal -->
@@ -91,20 +106,21 @@
 </div>
 
 
-<!-- Button trigger modal -->
+<!-- Button trigger modal  ! removed-->
 
 
-<!-- Modal -->
+<!-- Modal !! Center modal uses modal-lg to test for large modal. -->
 <div class="modal fade" id="centerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title" id="myModalLabel">Add milk...</h4>
       </div>
       <div class="modal-body">
-        <img src="images/chef.jpg" alt="">
-        <p>Adding milk</p>
+       <img src="images/chef2.jpg" alt="Adding milk" class="img-responsive">
+        <!-- <img class="img-responsive" src="images/chef.jpg" alt=""> -->
+        <p>Add some milk preferably 200ml.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -114,10 +130,8 @@
   </div>
 </div>
 
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#rightModal">
-  Launch demo modal
-</button>
+<!-- Button trigger modal !removed -->
+
 
 <!-- Modal -->
 <div class="modal fade" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -128,7 +142,8 @@
         <h4 class="modal-title" id="myModalLabel">Continue to mix</h4>
       </div>
       <div class="modal-body">
-        ...
+        <img class="img-responsive" src="images/chef.jpg" alt="In the mix...">
+        <p>As the last ingredients mix, you turn on some music and enjoy...</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
