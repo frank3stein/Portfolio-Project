@@ -7,9 +7,11 @@
     <title>Emil's first portfolio project</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +22,7 @@
   </head>
   
 	<body class="container">
-		<article class="row">
+		  <header class="row border1">
 			<!--<header class="row">-->
 				<section class="col-md-6">
 					<img src="http://placepuppy.it/100/100" class="img-responsive">
@@ -30,101 +32,113 @@
 					<h3 class="">Front-end Ninja</h3>
 				</section>
 				<!--</header>-->
+      </header>
 
 				<section class="row">
 				<img src="http://placepuppy.it/1200/465" class="img-responsive">
 				</section>
 
-				<section class="row">
-				<h2 class="heading3">Featured Work</h2>
-				</section>
+			<section class="row">
+          <section class="col-md-12">
+				    <h2 class="heading3">Featured Work</h2>
+				  </section>
+      </section>
+      <section class="row">
+				<section class="col-md-12">
+					<article class="col-md-4">
 
-				<section class="row text-center">
-					<article class="col-md-4"><!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  <img src="images/chef.jpg" class="img-responsive" alt="Here our chef is mixing the ingredients.">
-</button>
+            <a class="modal-link" data-toggle="modal" data-target="#leftModal"><img src="images/chef.jpg" class="img-responsive" alt="Here our chef is mixing the ingredients."></a>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">How to mix?</h4>
-      </div>
-      			<div class="modal-body">
-       				 <img src="images/chef.jpg" class="img-responsive"	alt="Here our chef is mixing the ingredients.">
-        			<p>First you add the flour (200gr.). Then you need to add 2 large size eggs and start to mix it. Mix until the mixture becomes dense.</p>
-      					</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <h3><a href="">How to mix?</a></h4>
+      
+      		</article>
+          
 
-						<h3 class=""><a href="">Mix</a></h3>
+          <article class="col-md-4">
+       			<a class="modal-link" data-toggle="modal" data-target="#centerModal" href=""><img src="images/chef2.jpg" class="img-responsive"	alt="Here our chef is adding milk."></a>
+						<h3 class=""><a href="">Add milk</a></h3>
 					</article>
 
 					<article class="col-md-4">
-						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  <img src="images/chef2.jpg" class="img-responsive" alt="Here our chef is mixing the ingredients.">
-</button>
+       			<a class="modal-link" data-toggle="modal" data-target="#rightModal" href=""><img src="images/chef.jpg" class="img-responsive"	alt="Here our chef is mixing again."></a>
+        		<h3 class=""><a href="">Mix</a></h3>	
+				
+					</article>
+        </section>  
+  </article>
+
+
+    <!-- Button trigger modal -->
+
 
 <!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="leftModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel2">Adding Milk...</h4>
+        <h4 class="modal-title" id="myModalLabel">Mix</h4>
       </div>
-      			<div class="modal-body">
-       				 <img src="images/chef2.jpg" class="img-responsive"	alt="Here our chef is adding milk.">
-        			<p>In the next step you need to add milk. Depending on your desired density you could put more or less. 200 ml is recommended.</p>
-      					</div>
+      <div class="modal-body">
+        <img src="images/chef.jpg" alt="Mixing at first." class="img-responsive">
+        <p>Mix the flour with 2 eggs and start to mix till it tickens.</p>      
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-						<h3 class=""><a href="">Add milk...</a></h3>
-					</article>
-					<article class="col-md-4">
-						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  <img src="images/chef.jpg" class="img-responsive" alt="Here our chef is mixing to get the right density.">
-</button>
+
+
+<!-- Button trigger modal -->
+
 
 <!-- Modal -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="centerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel3">Mix for about 10 minutes.</h4>
+        <h4 class="modal-title" id="myModalLabel">Add milk...</h4>
       </div>
-      			<div class="modal-body">
-       				 <img src="images/chef.jpg" class="img-responsive"	alt="Continue to mix for 10 minutes.">
-        			<p>Just mixing to achieve to the desired density.</p>
-      					</div>
+      <div class="modal-body">
+        <img src="images/chef.jpg" alt="">
+        <p>Adding milk</p>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
       </div>
     </div>
   </div>
 </div>
-						
-						<h3 class=""><a href="">Continue to mix</a></h3>
-					</article>
-				</section>
 
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#rightModal">
+  Launch demo modal
+</button>
 
-		</article>
+<!-- Modal -->
+<div class="modal fade" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Continue to mix</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
-	<script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	     
 	</body>
 </html>
 
