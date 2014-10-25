@@ -1,34 +1,40 @@
-body	{
-
-	font-family: 'Josefin Slab', serif;
-	
-}
+/*Whole Document*/
 
 html {
 	background-image: url('../images/back/brushed.png');
 }
 
-h2 {
-color: #BCBBBB;
+body {
 
-
-}
-
-h1, h3 {
-	color: #747704;
-
-}
-
-
-a {
-	color:#747704 ;
+	font-family: 'Josefin Slab', serif;
+	
 }
 
 
 @media screen and (max-width: 750px) {
 
-.mobile{
+	.mobile{
 	text-align: center;
-}
+	}
 	
+}
+/*Whole Document*/
+
+/*Headings*/
+h2 {
+color: #BCBBBB;
+ 
+}
+
+h1,
+h3 {
+	color: #747704;
+
+}
+/*Headings*/
+
+
+
+a {
+	color: #747704 ;
 }
