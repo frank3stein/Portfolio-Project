@@ -1,6 +1,11 @@
 body	{
 
 	font-family: 'Josefin Slab', serif;
+	
+}
+
+html {
+	background-image: url('../images/back/brushed.png');
 }
 
 h2 {

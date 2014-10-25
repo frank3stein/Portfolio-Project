@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Emil's first portfolio project</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<body class="container">
+		  <header class="row border1">
+<!--<header class="row">-->
+				<section class="col-md-6">
+					<img src="http://placehold.it/100x100" class="img-responsive">
+				</section>
+				<section class="col-md-6 text-right">
+					<h1 class="text-uppercase">Emil Martinov</h1>
+					<h3 class="">Front-end Ninja</h3>
+				</section>
+<!--</header>-->
+      </header>
+
+<!-- The border starts-->
+      <section class="row">
+          <section class="col-md-12">
+            <hr>
+          </section>
+      </section>
+<!-- The border ends -->
+
+
+<!-- the big picture  -->
+				<section class="row">
+          <section class="col-md-12">
+        <img src="http://placehold.it/1200x465" class="img-responsive">
+				  </section>
+        </section>
+<!-- big picture ends -->
+<!-- Feature work starts -->
+			<section class="row">
+          <section class="col-md-12">
+				    <h2>Featured Work</h2>
+				  </section>
+      </section>
+
+<!-- Featured work ends -->
+
+<!-- Portfolio projects start x3 -->
+      <section class="row mobile">
+					<article class="col-md-4">
+
+            <a class="modal-link" data-toggle="modal" data-target="#leftModal"><img src="images/chef.jpg" class="img-responsive" alt="Here our chef is mixing the ingredients."></a>
+
+            <h3 class=""><a href="">How to mix?</a></h4>
+      
+      		</article>
+          
+
+          <article class="col-md-4">
+       			<a class="modal-link" data-toggle="modal" data-target="#centerModal" href=""><img src="images/chef2.jpg" class="img-responsive"	alt="Here our chef is adding milk."></a>
+						<h3 class=""><a href="">Add milk</a></h3>
+					</article>
+
+					<article class="col-md-4">
+       			<a class="modal-link" data-toggle="modal" data-target="#rightModal" href=""><img src="images/chef.jpg" class="img-responsive"	alt="Here our chef is mixing again."></a>
+        		<h3 class=""><a href="">Mix</a></h3>	
+				
+					</article>
+        </section>  
+
+<!-- Portfolio Projects end -->
+    <!-- Button trigger modal !removed-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="leftModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Mix</h4>
+      </div>
+      <div class="modal-body">
+        <img src="images/chef.jpg" alt="Mixing at first." class="img-responsive">
+        <p>Mix the flour with 2 eggs and start to mix till it tickens.</p>      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal  ! removed-->
+
+
+<!-- Modal !! Center modal uses modal-lg to test for large modal. -->
+<div class="modal fade" id="centerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add milk...</h4>
+      </div>
+      <div class="modal-body">
+       <img src="images/chef2.jpg" alt="Adding milk" class="img-responsive">
+        <!-- <img class="img-responsive" src="images/chef.jpg" alt=""> -->
+        <p>Add some milk preferably 200ml.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal !removed -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Continue to mix</h4>
+      </div>
+      <div class="modal-body">
+        <img class="img-responsive" src="images/chef.jpg" alt="In the mix...">
+        <p>As the last ingredients mix, you turn on some music and enjoy...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+	     
+	</body>
+</html>
+
