@@ -33,7 +33,9 @@ h3 {
 }
 /*Headings*/
 
-
+.logo {
+	margin-top: 15px;
+}
 
 a {
 	color: #747704 ;
