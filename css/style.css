@@ -1,42 +1,78 @@
-/*Whole Document*/
+:root {
+    --backgroundColor: greenyellow;
+    --rebecca : rebeccapurple;
+    --flex-container : {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    };
+    --flex-items : {
 
-html {
-	background-image: url('../images/back/brushed.png');
+    };
+    --header-theme: {
+        font-size: 20px;
+        background-color: orange;
+        color: white;
+        & p {
+            margin: 20px;
+            color: color(var(--rebecca) lightness(90%));
+        }
+        & ul {
+            @apply --flex-container;
+            list-style: none;
+
+            & li {
+                    background: springgreen;
+                    color: var(--rebecca);
+                    margin: 4px;
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+            }
+        }
+
+        & h2 {
+            text-align: center;
+            color: var(--rebecca);
+        }
+        
+        & h5 {
+          margin: 20px;
+        }
+    };
+
+}
+
+header {
+    @apply --header-theme;
+    @apply --flex-container;
 }
 
 body {
-
-	font-family: 'Josefin Slab', serif;
-	
+    background-color: var(--backgroundColor);
+    color: var(--rebecca);
 }
 
-
-@media screen and (max-width: 750px) {
-
-	.mobile{
-	text-align: center;
-	}
-	
-}
-/*Whole Document*/
-
-/*Headings*/
-h2 {
-color: #BCBBBB;
- 
-}
-
-h1,
-h3 {
-	color: #747704;
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 
 }
-/*Headings*/
 
-.logo {
-	margin-top: 15px;
+.headerName {
+    font-size: 2em;
 }
 
-a {
-	color: #747704 ;
+.headerJob {
+
+}
+
+ul {
+
+}
+
+li {
+
 }
