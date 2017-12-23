@@ -1,0 +1,13 @@
+:root {
+    --backgroundColor: rgb(182, 77, 77);
+    --bodyBackgroundColor: rebeccapurple;
+    --textColor: yellow;
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+p {
+    color: var(--textColor);
+}

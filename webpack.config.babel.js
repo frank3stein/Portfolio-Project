@@ -1,11 +1,11 @@
-const {resolve} = require('path');
+import {resolve} from 'path';
 
 module.exports = env => { /* The reason we use a function here instead of an object
     is so we can pass in arguements. That is useful for setting the workspace
     environment development vs productions. () =>{} turns into env =>{}
     */
     return({
-        context:resolve('src'), // tells webpack where to look for files
+        context:resolve(__dirname, 'app'), // tells webpack where to look for files
         entry:'./app.js',
         output: {
             path: resolve('dist'),
@@ -37,7 +37,8 @@ module.exports = env => { /* The reason we use a function here instead of an obj
             ]
         },
         devServer:{
-
+            open: true,
+            compress: true
         },
         plugins:[],
         devtool: env.prod ? 'source-map' : 'eval', /*Devtool stands for sourcemaps, 'eval' value is really
