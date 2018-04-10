@@ -3,18 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist'),
+    publicPath: './dist' // If not included, webpack dev server, doesn't update index changes.
   },
   module: {
     rules: [
-      {
-        test: /\.gz$/,
-        enforce: 'pre',
-        use: 'gzip-loader'
-      },
+      // {
+      //   test: /\.gz$/,
+      //   enforce: 'pre',
+      //   use: 'gzip-loader'
+      // },
       {
         test: /\.css$/,
         use: [  'style-loader',
@@ -26,9 +27,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader?cacheDirectory=true',
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ["@babel/preset-env"] 
           }
         }
       },
@@ -44,7 +45,9 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve('./dist')
+    contentBase: path.join(__dirname, './src'),
+    hot: true,
+    compress : true
   },
   devtool: 'inline-source-map',
   plugins: [

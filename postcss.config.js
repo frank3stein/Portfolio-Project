@@ -1,8 +1,12 @@
 module.exports = {
-    parser: 'sugarss',
+    // parser: 'sugarss',
     plugins: {
-      'postcss-import': {},
-      'postcss-cssnext': {},
+      // 'postcss-import': {},
+      'postcss-cssnext': {
+        features:{
+          autoprefixer: false
+        }
+      },
       'cssnano': {}
     }
   }
