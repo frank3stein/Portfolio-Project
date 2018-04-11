@@ -6,16 +6,10 @@ module.exports = {
   entry: './src/app',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
-    publicPath: './dist' // If not included, webpack dev server, doesn't update index changes.
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
-      // {
-      //   test: /\.gz$/,
-      //   enforce: 'pre',
-      //   use: 'gzip-loader'
-      // },
       {
         test: /\.css$/,
         use: [  'style-loader',
@@ -45,15 +39,15 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, './src'),
-    hot: true,
+    contentBase: path.join(__dirname, './dist'),
     compress : true
   },
   devtool: 'inline-source-map',
   plugins: [
       new CleanWebpackPlugin(['dist']),
       new HtmlWebpackPlugin({
-        title: 'Development'
+        title: 'Development',
+        template: './src/index.html' // Normally creates a generic HTML for js file. But with template we can feed in our own HTML.
       })
   ]
 };
