@@ -1,6 +1,7 @@
-const path = require('path');
+const path =  require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 module.exports = {
   entry: './src/app',
@@ -48,6 +49,15 @@ module.exports = {
       new HtmlWebpackPlugin({
         title: 'Development',
         template: './src/index.html' // Normally creates a generic HTML for js file. But with template we can feed in our own HTML.
-      })
+      }),
+      // new HtmlWebpackExternalsPlugin({
+      //   externals: [
+      //     {
+      //       module:'jquery', //Example for CDN
+      //       entry: 'https://unpkg.com/jquery@3.2.1/dist/jquery.min.js',
+      //       // global:'jQuery'  //if you want to setup a global
+      //     }
+      //   ]
+      // })
   ]
 };

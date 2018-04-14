@@ -1,8 +1,8 @@
 import './styles.css';
 
-const elem = document.createElement('div');
-elem.innerText = 'This is a portfolio site';
-document.body.appendChild(elem);
+const body = document.getElementsByTagName('BODY');
+const p = document.createElement('p');
+p.innerHTML = 'Hello there third time, this time from app.js';
+document.body.append(p);
 
-let [a, b] = [1,2];
-console.log(a,b);
+
