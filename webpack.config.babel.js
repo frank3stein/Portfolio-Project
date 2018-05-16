@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
+console.log(__dirname);
 module.exports = {
   entry: './src/app',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -33,9 +34,20 @@ module.exports = {
         use: {
           loader: 'html-loader',
           options: {
-            attrs: [':data-src']
+            attrs: [':data-src', 'img:src'] //<tag>:<attribute>
           }
         }
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              minimize: true
+            }  
+          }
+        ]
       }
     ]
   },
